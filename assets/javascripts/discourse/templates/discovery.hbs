@@ -12,12 +12,8 @@
 
 {{loading-spinner condition=loading}}
 
-{{#if Discourse.SiteSettings.active}}
-  <div {{bind-attr class=":container :list-container :with-sidebar loading:hidden"}}>
-{{else}}
-  <div {{bind-attr class=":container :list-container loading:hidden"}}>
-{{/if}}
 
+<div {{bind-attr class=":container :list-container Discourse.SiteSettings.active:with-sidebar loading:hidden"}}>
   <div class="row">
     <div class="full-width">
       <div id='header-list-area'>
